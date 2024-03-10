@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Accounts | Basic Banking System</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="assets/css/customer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar starts here  -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADgCAMAAADCMfHtAAAAwFBMVEX///8Ec+o40gAAceoAZOgAbukAaekAbekAZ+kAa+kAaOkm0AAAY+gv0QAXzgDy9v3i6/zN3Pmcu/Tq+eip6J/5+/7V4vq3zfdgl++gvvS/0/g1geyIr/LH2PjQ8svf9ttk2U0ceOuW5Ilq2lWH4Hd6pvH4/ffb9ddwoPCrxfVRju3r8f3C7ru1661z3GBT1jec5ZBGie3z/PFW1ztC0x3K8MOO4oA5g+yA32+Cq/FLi+2w6qa97bWZ5Ixn2lGStfOyaZ8rAAAIfklEQVR4nO2d6VrbOhCG43iJHWOTFBIStiRtKGtZQ4EWDvd/V8cxUEI8I41EqpHP0fuzSx59z9jSp9Fo3Gg4HA6Hw+FwOBwOh8PhcDgcDofD4XD8vzntd/sd7kH8PbYGSRBFURxfDde5x/I3+JJEofeCnwRH/zmNfS/xFgnjY+4hrZaDwFsmPuIe1ArZ81sVgZ6XDLjHtSp6R9UAlkS73ENbDdutEBboeUGXe3AroDeIMX0FE+7hfZ6tCA1g+ZxucQ/wk6yfiAJY4O9wD/FzHMfCAJZvYp0t3OlVJNNXrBg1XveHgS8X6IUH3OPUpbNDCGCBf8I9Uk2eSQGcK7ziHqoWnUki11ZnhbvUABaENfSmy9skMa36WVNgmyQi2uYesCLwNknAWo97yEqg2ySUmr2G26HUpC0T9LkHrYB4m4SEsE7rvWSbBNOuT8JNuk0CWdvjHjcZwjYJElib7S9pm1TBj2sTwWFMN2nvtK9OuQdOZdDW0FenjPeOookpiU/qM4nuaEwxYVKbKabRONGIYDyokRfdVZ9EW35tptCCvqrRLowolnna2D97vB0ZHT4BZX2JBx9UHE6zPC3I8/EPwxqEfFHZzBf4aw/g74zGedZ8JUvTTcMycHqKL2EygfPbP9/1laSzDcNKMNRC6AfP4K/sNz/qm5PvG5aCoBTA6A42afd5RZ81ErsKbs2Ph+Bv3GbVAL5ItOFBfaC7mfYvMIDfz8EAlhPOhWk5ABOqvhA5Bn1MkQCW082jYTlV1qmrfTwAXfb1GA3gC6YFVdijrRVhAqd8f+eCAJZBZJ9shqS1IjgCXfbGTSrWV7yJP00rWmaXMNG0PNhlb8oCOGdmWFCFI6lCH3HZo5k0gHNyw4IqDGQK/Qmcz/4qmWH+KOReEgey9BNSRzIjCrRAoW4Mf9YlhoT3ENksHdbkPdwlZGgSDw7jZS3m0mPaeghPpxsX8vVwalhQBaKnaYWaSyK/p1HwpXq2xrSgKhOiQjQB/EMUxtSCjJTC/hBJ4l9/s3t/qLLHxw5izrAtIvtiWEIXWBDBh2nINt+OPI1yru0L+CtQqia/NSwFoad4cBjtwPnS6XK+tGlNcl85542kTEc3iznv/NKwDBFqAr152hu2cYfTtDy3SPOb34Y1iOkqnz1hbrxwALePj2eHRodP4UHxOfXmmY163ZO50jjkRrJTtjLROccP61RU2tORWK+j/IZWQRSW6beT3TWtmqgaldSoXD5YwK9RWVThbhTuH7yDnZpayemdVnki4sbtRK9CEXPjVrL+S6dI0Q/qdKVEq9QbdeNWolOuj59R2YngZrqAWlXzqV+bKbHUjX8H/7Tr6VQNY+f9rExTJGF0oLX+IzUbjOznzfwcDmNfy8aFkWU2LivzRkhhz7OeG7fqhsLTy8FK/s81+NfUu9wf8QO4/o2D67dcdZYjZyiabtwaGzd9z+KmN/Ahg+ZlIUvc+PXicUOWI4XLehe+IisuJV4uJeIv4ES83qW9cGLBulE5Tcmf4H+o5cb9kH1O3a+eUKczOGGt5cb9kDuKU+hgM0eqCfdCdRvnc7dXgk9usyZysKnhxpnvQI+w8/f8Hv4PXaVOEiVt1rX/B1ookmWIG39QXv8DzlcRfA3fwrgqN87abmEsqmdamRvnbJIl0FeGcbwSN87ZQkpWdpflyFm1WlI1MqtqEXkNLO7GFZKqEd9pMaHKF3fjbbKNa8GlGyYg1fims8+6ccbZlCKwIP8K//fthBZGRut2Qyhifgkj5sZpNi4xrOsd0Yq/FEaklpnWTyo2K2sB3LVVyDLEjVOSqnwKN6i3Qsow3mvbOD6FjQsFhYWNO4N/Rdqbj+89bPymP6ZlGL/BYezsiMPIuQ1WU1iEUSep6nPuLjYVJTZTxI2LShx4eyrOFBXiNg5347w9FdFEhiCMF7AbR0scWHf582s9yhIzrMAZTqqyd8K+V30Vm7gbB5OqjFuLV841JKJJVaDEwYJW31oSU2pS1b8zqwaEeml5KYyIG18qcbCjAhW9tyQETap+dONmpWAIrp8JwyhPqtpTtqAZRjSp+hZG7qOZBb7DbYKkYRSXOARW1YHtY52CxGEUlThY10F5qhVGQVI1sa7MjdhFoBJGzI1b9Yy+orc2YiUOVkJsyrKMVdcNZZAa61TDiCRVrYTQHAkMI3vDJAWkDa5A0BIHG5E2KUPCiJQ4WImw0RwexgxJqtqIoFmgMIyIG7cStOGjOIwWdBKko+nGkaSqlUCNVwlhxEocrITa0+sjmBtnpNfp9+FqUF03bpWN6x54QTuK4gD+hDGpp1c1jEhSlYHtSSz5hDGhpxcEVuJgmN7JxyOVEOwVrOvGLXgbO9UkNXhXQteNs284Om3gTAxuQCPs6YVLZH4ZeyF86AdeedVLqmbmVS2Cdr6EG9DoJFUz1u3GnqA0Dfz+gY4bZ31O74RlIgH00XR1N56dG9f1h76kurAFNqBRTqrmfNupZ2lRGtiA5rCptnAw7qbED2kJ3IBGLanK2MKUVJAOtoNUSqpmY+PKXiG2LoXbQaq4cbZGu6fUMuYAqhdRsXHGpb1CbT+LfXuMnFTla5ZMiqHg22PXY1IY+d7DxoTyhAoblpGSqoyfRziQ1tpjLaD/QLFxWOWtAaSdrikdZ86kNo7R0zTEKz7Win0ZSVKVdXMxFATRD7AGnhXESVXebskTNIpqbZ8ESVXmtvOdNSyAiiWTgqTq3xk5mS1QYnSnXjH5BIeRv6P3cVUi9u0xCSMgqZqlFmSFu8s30JBvjxGoJFWtyJeWbb3ed8J+5H+iHnTj26JGixpen+56cZS0WkkUXH2y3nU073edZVma5rNNqw6DO9vD5+fjvVXcGxg9Xn592jyz4vl0OBwOh8PhcDgcDofD4XA4HA6Hw+FYIf8CDYaqmU2A6n4AAAAASUVORK5CYII=" width="30" height="30" class="d-inline-block align-top" alt="Bank Logo">
+            Standard Chartered Bank Hackathon
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile_page/profile.html">Profile</a>
+                  </li>
+                <li class="nav-item  active">
+                    <a class="nav-link" href="./customers.html"
+                        style="color: rgb(37, 36, 36)!important; background-color: rgb(180, 178, 178);">Send Money</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- navbar ends here  -->
+
+    <div class="my-info text-center">
+        <h2>Name: Rakshita Upadhyay</h2>
+        <h4>Net Bank Balance: $<span id="myAccountBalance">5000</span></h4>
+
+        <button class="btn btn-info" data-toggle="modal" data-target="#sendMoney">Send Money</button>
+        <a class="btn btn-info" href="" data-toggle="modal" data-target="#transactionHistory">See All Transactions</a>
+    </div>
+
+    <!-- Modal send money -->
+    <div class="modal fade" id="sendMoney" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-group mb-3">
+                            <input type="text" id="enterName" class="form-control" placeholder="Recipient's username"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">@email.com</span>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <input type="text" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                                aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send
+                        Money</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal transaction History-->
+    <div class="modal fade" id="transactionHistory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Transaction History</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol id="transaction-history-body">
+
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- table  -->
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr class="table-primary">
+                        <th scope="col">Sl. No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Bank Balance(in Rupees)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-light">
+                        <td scope="row">1</td>
+                        <td>Manvi</td>
+                        <td>manvi@email.com</td>
+                        <td>
+                            <p id="manviBankBalance">4500</p>
+                        </td>
+                    </tr>
+                    <tr class="table-info">
+                        <td scope="row">2</td>
+                        <td>Ananya</td>
+                        <td>ananya@email.com</td>
+                        <td>
+                            <p id="ananyaBankBalance">24000</p>
+                        </td>
+                    </tr>
+                    <tr class="table-light">
+                        <td scope="row">3</td>
+                        <td>Harini</td>
+                        <td>harini@email.com</td>
+                        <td>
+                            <p id="hariniBankBalance">3400</p>
+                        </td>
+                    </tr>
+                    <tr class="table-info">
+                        <td scope="row">4</td>
+                        <td>Suprabha</td>
+                        <td>suprabha@email.com</td>
+                        <td>
+                            <p id="suprabhaBankBalance">4000</p>
+                        </td>
+                    </tr>
+                    <tr class="table-light">
+                        <td scope="row">5</td>
+                        <td>Aarushi</td>
+                        <td>aarushi@email.com</td>
+                        <td>
+                            <p id="aarushiBankBalance">6300</p>
+                        </td>
+                    </tr>
+                    <tr class="table-info">
+                        <td scope="row">6</td>
+                        <td>Vaani</td>
+                        <td>vaani@email.com</td>
+                        <td>
+                            <p id="vaaniBankBalance">1003</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+</body>
+</html>
